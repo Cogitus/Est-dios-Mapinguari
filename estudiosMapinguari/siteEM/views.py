@@ -11,13 +11,16 @@ def data_list(request):
 	resultado = Session.objects.all().order_by('user')
 	return render(request, 'siteEM/data_list.html', {'rst' : resultado})
 
-def simple_upload(request):
+def upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        return render(request, 'siteEM/data_list.html', {
+        return render(request, 'siteEM/inicial.html', {
             'uploaded_file_url': uploaded_file_url
         })
-    return render(request, 'siteEM/data_list.html')
+    return render(request, 'siteEM/inicial.html')
+
+def analisar(request):
+	pass
