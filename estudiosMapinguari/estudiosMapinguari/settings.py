@@ -70,6 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'estudiosMapinguari.wsgi.application'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
