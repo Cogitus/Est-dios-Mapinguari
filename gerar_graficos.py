@@ -8,10 +8,11 @@
 def gerar_graficos(lista_repeticoes_abs, lista_repeticoes_perc): 
     """
     input: listas de contagem de repeticões, absolutas e percentuais
-    output: fotos, em .png, dos gráficos de contagem absoluta e percentual (TO_DO)  
+    output: nada é retornado.   
     """
     
-    # As fotos não são retornadas, apenas salvas na pasta atual.
+    # As fotos (.png) dos gráficos de contagem absoluta e percentual (TO_DO)
+    #  não são retornadas, apenas salvas na pasta atual.
     
     # aqui organizam-se as séries contidas nas listas em ordem decrescente (maiores repitições aparecem no topo). 
     for i in range(0,len(lista_repeticoes_abs)): #como ambas listas possuem o mesmo tamanho, tanto faz qual usar pra ter o tamanho
@@ -31,7 +32,7 @@ def gerar_graficos(lista_repeticoes_abs, lista_repeticoes_perc):
     # aqui iremos plotar os gráficos
     import matplotlib.pyplot as plt
 
-    #plotagem do gráfico de diferenças absolutas
+    #download dos gráficos de diferenças absolutas
     for i in range (0,len(lista_repeticoes_abs)):
         plt.figure(i)
 
@@ -43,4 +44,6 @@ def gerar_graficos(lista_repeticoes_abs, lista_repeticoes_perc):
         plt.xlabel('elemento repetido')
         plt.bar(copia_lista_rep_abs[i].index,lista_repeticoes_abs[i].values)#plotagem do gráfico de diferenças percentuais
         plt.savefig(str(i)+'abs.png')    
+
+    #download dos gráficos de diferenças percentuais (TO_DO)
 
