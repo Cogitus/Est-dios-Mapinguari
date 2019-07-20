@@ -1,0 +1,15 @@
+<!--
+{% extends 'siteEM/base.html' %}
+{% block content %}
+	    <input type="file" id="files" name="files[]" class="btn btn-primary" />
+
+	    <a href="{% url baixar_arquivo %}"> <button> Download </button> </a>
+
+	    {% for rst in rst %}
+		    <div>
+		        <p>user: {{ rst.user }} senha: {{ rst.password }}</p>
+		    </div>
+		{% endfor %}
+
+{% endblock %}
+-->
