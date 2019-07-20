@@ -12,8 +12,8 @@ posicao = [-1]
 nome = ''
 def analisar(request):
 	pos = posicao
-	tabDifAbs, tabDifPer, lisRedAbs, lisRepPerc = gera_tabelas(pos[0].data)
-	return render(request, 'siteEM/analise.html', {'pos' : pos[0].data.name})
+	tabDifAbs, tabDifPer, lisRepAbs, lisRepPerc = gera_tabelas(pos[0].data)
+	return render(request, 'siteEM/analise.html', {'pos' : pos[0].data.name, 'tda' : tabDifAbs, 'tdp' : tabDifPer, 'lra' : lisRepAbs, 'lrp' : lisRepPerc})
 
 def upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
